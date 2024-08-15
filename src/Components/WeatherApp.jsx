@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import '../App.css';
 import EarthAnimation from '../Assets/gif/EarthAmimation.gif';
 import LoadingAnimation from '../Assets/gif/loading.gif';
@@ -53,7 +53,7 @@ export default function WeatherApp() {
     '50n': MistNight, // mist night
   };
 
-  const fetchWeather = (location) => {
+  const fetchWeather = useCallback((location) => {
     if (!location) return;
 
     setLoading(true);
@@ -78,7 +78,7 @@ export default function WeatherApp() {
         setLoading(false);
         setError(true);
       });
-  };
+  }, []);
 
   const searchLocation = (e) => {
     if (e.key === "Enter") {
@@ -126,7 +126,7 @@ export default function WeatherApp() {
 
   useEffect(() => {
     // Effect logic here
-  }, [fetchWeather, location]); // Add dependencies here
+  }, [fetchWeather, location]);
 
   const getBackgroundImage = () => {
     if (data && data.weather && data.weather[0].icon) {
