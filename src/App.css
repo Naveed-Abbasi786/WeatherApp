@@ -1,0 +1,206 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family:Oxygen ;
+  src: url(Assets/Fonts/Oxygen/Oxygen-Regular.ttf);
+}
+.WeatherAppContainer{
+  width: 100%;
+  height: 100vh;
+  background-image: url(Assets/images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: auto;
+}
+.WeatherApp{
+  width: 60%;
+  height: 82%;
+  border: solid;
+  display: flex;
+  flex-direction: row;
+  margin: 4% auto;
+}
+ .WeatherApp > .WeatherImage{
+  width: 60% !important;
+  height: 100% !important;
+  background-repeat: no-repeat;
+  background-size: 100% 65%;
+  display: flex;
+  align-items: flex-end; 
+  flex-direction: column;
+  justify-content: space-between; 
+}
+.WeatherImage > h1 {
+  color: white;
+  padding: 18px;
+  line-height: 1;
+  text-align: right; 
+  align-self: flex-end; 
+  margin: 0; 
+}
+.DateTime {
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 10, 0.73) ;
+}
+
+.DateTime > h2 {
+  width: 100%;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 1px;
+ 
+}
+
+.DateTime > .date {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.DateTime > .date > h4 {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.DateTime > .date > h1 {
+  font-weight: 500;
+  margin-top: 10%;
+  font-size: 50px;
+
+}
+.Weather{
+  width: 40%;
+  background-color: rgba(0, 0, 10, 0.73) ;
+}
+.IconWeather{
+  width: 50% !important;
+  height: 30% !important;
+  margin: 5% 25%;
+}
+
+.iconsWeather>h3{
+  color: white;
+  text-align: center;
+  margin-top: -10%;
+}
+.iconsWeather>hr{
+  width: 80%;
+  margin: auto;
+  border: solid #777 1.5px;
+}
+.WeatherLocation{
+  width:80%;
+  border: solid;
+  border: none;
+  margin: 4% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.WeatherLocation>input{
+  outline: none;
+  background: transparent;
+  border: none;
+  color: #eee;
+  padding: 6px;
+  font-family:  Oxygen;
+  border-bottom: solid 2px #777;
+}
+.WeatherLocation>input::placeholder
+{
+  color: white;
+}
+.WeatherLocation> .Icons {
+  display: flex;
+  justify-content: space-between;
+ margin-top: 3%;
+}
+.Icons > .SerachIcon , .CurrentLocation{
+   border-radius: 50px;
+   padding: 7px; 
+   padding-top: 9px;
+   text-align: center;
+   cursor: pointer;
+ }
+ .SerachIcon:hover,
+ .CurrentLocation:hover {
+   background: #777;
+ }
+  
+.Weather #CityWeather{
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+  background: #777;
+  padding: 4px;
+}
+.Weather .Temprature{
+  color: white; 
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5% auto;
+  border-bottom: 2px solid #777;
+}
+
+.Weather .Temprature >p{
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1075px) {
+  .WeatherApp{
+    width: 90% !important;
+    height: 99vh;
+  }
+  .WeatherLocation{
+    width: 100%;
+    display: block;
+  }   
+  .Icons{
+    width: 5% !important;
+   margin-left:  36%;
+    
+  }
+  .WeatherLocation>input{
+    width: 70%;
+    margin: auto;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 571px) {
+  .Weather{
+    width: 100%;
+  }
+  .WeatherApp{
+    width: 80% !important;
+    height: 100% !important;
+    border: none;
+    flex-direction: column;
+  }
+  .WeatherApp > .WeatherImage{
+    width: 100% !important;
+    border: none;
+  }
+  .DateTime {
+    background-color: rgba(0, 0, 10, 0.33) ;
+  }
+  .DateTime > .date > h4 {
+    font-size: 20px;
+  }
+  .DateTime > .date > h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 371px) {
+  .DateTime > .date > h1 {
+    margin-top: 25%;
+  }
+}
