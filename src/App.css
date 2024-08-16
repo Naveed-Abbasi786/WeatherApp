@@ -182,8 +182,9 @@
   .WeatherApp{
     width: 80% !important;
     height: 100% !important;
+    margin-top: 20%;
     border: none;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .WeatherApp > .WeatherImage{
     width: 100% !important;
