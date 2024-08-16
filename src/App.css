@@ -188,7 +188,7 @@
   }
   .WeatherApp > .WeatherImage{
     width: 100% !important;
-    border: none;
+    border: solid;
   }
   .DateTime {
     background-color: rgba(0, 0, 10, 0.33) ;
